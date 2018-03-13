@@ -1,0 +1,14 @@
+{
+    "name": "tamce/dbsync",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tamce",
+            "email": "tamce@outlook.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^5.4"
+    }
+}
