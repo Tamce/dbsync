@@ -2,23 +2,31 @@
 require __DIR__.'/../vendor/autoload.php';
 use Illuminate\Database\Capsule\Manager as Capsule;
 
+// ********************************
+//         Configure Here
+// ********************************
+
+// Key used to encrypt and decrypt data
 define ('KEY', '');
+// 16 bytes IV used to encrypt and decrypt data
 define ('IV', '');
+// which method will be used to encrypt and decrypt
 define ('METHOD', 'aes-256-cfb');
-
+// Server url
 define ('URL', 'localhost:8000');
+// Server database config
 $data = [
-    'db' => 'apiv2',
+    'db' => 'database',
     'username' => 'root',
     'password' => 'root',
-    'table' => 'lostitem'
+    'table' => 'table'
 ];
-
+// Where the data are stored to
 $target = [
-    'db' => 'test',
+    'db' => 'database',
     'username' => 'root',
     'password' => 'root',
-    'table' => 'test'
+    'table' => 'table'
 ];
 
 

@@ -2,9 +2,17 @@
 require __DIR__.'/../vendor/autoload.php';
 use Illuminate\Database\Capsule\Manager as Capsule;
 
+// ********************************
+//         Configurate Here
+// ********************************
+// Key used to encrypt and decrypt data
 define ('KEY', '');
+// 16 bytes IV used to encrypt and decrypt data
 define ('IV', '');
+// which method will be used to encrypt and decrypt
 define ('METHOD', 'aes-256-cfb');
+// ********************************
+
 
 $data = file_get_contents('php://input');
 $data = json_decode(openssl_decrypt($data, METHOD, KEY, 0, IV), true);
